@@ -1,0 +1,322 @@
+    .hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+    }
+
+    /* =========================
+    MAIN LAYOUT
+    ========================= */
+
+    .inner {
+    position: relative;
+    z-index: 2;
+
+    min-height: 760px;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    align-items: center;
+    }
+
+    .content {
+    max-width: 900px;
+    }
+
+    /* =========================
+    AVAILABILITY
+    ========================= */
+
+    .availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    margin-bottom: 2rem;
+
+    padding: 0.65rem 1rem;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: rgba(17, 19, 25, 0.75);
+
+    color: var(--text-secondary);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    }
+
+    .availabilityDot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 12px var(--accent);
+    }
+
+    /* =========================
+    TYPOGRAPHY
+    ========================= */
+
+    .content h1 {
+    max-width: 900px;
+
+    font-size: clamp(4rem, 6.5vw, 6.6rem);
+    font-weight: 500;
+
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+    }
+
+    .content p {
+    max-width: 680px;
+
+    margin-top: 2rem;
+
+    color: var(--text-secondary);
+
+    font-size: 1.25rem;
+    line-height: 1.6;
+    }
+
+    /* =========================
+    BUTTONS
+    ========================= */
+
+    .actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 2rem;
+    }
+
+    .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.95rem 1.4rem;
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .button:hover {
+    transform: translateY(-3px);
+    }
+
+    .primaryButton {
+    background: var(--text-primary);
+    color: var(--background);
+    }
+
+    .secondaryButton {
+    border: 1px solid var(--border);
+
+    background: rgba(17, 19, 25, 0.65);
+    color: var(--text-primary);
+    }
+
+    .secondaryButton:hover {
+    background: var(--surface);
+    }
+
+    /* =========================
+    RIGHT SIDE
+    ========================= */
+
+    .visual {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .monogram {
+    position: relative;
+    z-index: 3;
+
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: -0.08em;
+
+    color: #24272f;
+
+    transform: rotate(-8deg);
+
+    pointer-events: none;
+    }
+
+    /* =========================
+    BACKGROUND GRID
+    ========================= */
+
+    .grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+        rgba(255, 255, 255, 0.035) 1px,
+        transparent 1px
+        ),
+        linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.035) 1px,
+        transparent 1px
+        );
+
+    background-size: 160px 140px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+    }
+
+    /* =========================
+    PURPLE GLOW
+    ========================= */
+
+    .glow {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -50px;
+    top: 180px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(87, 59, 166, 0.3),
+        transparent 70%
+    );
+
+    filter: blur(10px);
+
+    pointer-events: none;
+    }
+
+    /* =========================
+    BOTTOM META
+    ========================= */
+
+    .meta {
+    position: absolute;
+
+    bottom: 2.5rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    padding-top: 1.5rem;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    }
+
+    /* =========================
+    TABLET / MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+    .hero {
+        min-height: 100svh;
+    }
+
+    .inner {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        padding-top: 9rem;
+    }
+
+    .content h1 {
+        font-size: clamp(3.3rem, 14vw, 5rem);
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+        .visual {
+        display: flex;
+
+        min-height: 320px;
+
+        margin-top: 3rem;
+        }
+    .meta {
+        position: relative;
+
+        bottom: auto;
+        left: auto;
+
+        transform: none;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0.7rem;
+
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+    }
+
+    @media (max-width: 600px) {
+    .actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .content h1 {
+        font-size: clamp(3rem, 15vw, 4.2rem);
+    }
+    }
+
+        .heroAccent {
+    color: var(--text-secondary);
+    font-weight: 400;
+    }

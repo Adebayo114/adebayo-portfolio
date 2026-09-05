@@ -1,0 +1,97 @@
+    .wrapper {
+    margin-top: 6rem;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    }
+
+    .heading span {
+    color: var(--text-secondary);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    }
+
+    .heading h3 {
+    margin-top: 0.75rem;
+
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+    }
+
+    .reactions {
+    display: flex;
+    gap: 1rem;
+
+    margin-top: 2.5rem;
+    }
+
+    .reactions button {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    padding: 0.9rem 1.2rem;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: transparent;
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .reactions button:hover {
+    color: var(--text-primary);
+    border-color: #3b4049;
+
+    transform: translateY(-2px);
+    }
+
+    .reactions button.active {
+    background: var(--text-primary);
+    color: var(--background);
+    border-color: var(--text-primary);
+    }
+
+    .icon {
+    font-size: 1rem;
+    }
+
+    .count {
+    display: block;
+
+    margin-top: 1.5rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 600px) {
+    .reactions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .reactions button {
+        width: 100%;
+        justify-content: center;
+    }
+    }

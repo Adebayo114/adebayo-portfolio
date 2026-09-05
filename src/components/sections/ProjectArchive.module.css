@@ -1,0 +1,293 @@
+    .experience {
+    position: relative;
+    padding: 11rem 0;
+
+    background: #0c0d10;
+    }
+
+    .inner {
+    display: flex;
+    flex-direction: column;
+    }
+
+    /* TOP */
+
+    .topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    }
+
+    /* HEADING */
+
+    .heading {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 6rem;
+
+    align-items: end;
+
+    margin-top: 5rem;
+    }
+
+    .heading h2 {
+    font-size: clamp(3.3rem, 6vw, 6.5rem);
+    font-weight: 400;
+
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    }
+
+    .heading h2 span {
+    color: var(--text-secondary);
+    }
+
+    .heading p {
+    max-width: 470px;
+
+    color: var(--text-secondary);
+
+    font-size: 1rem;
+    line-height: 1.8;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+    margin-top: 7rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .row {
+    display: grid;
+    grid-template-columns: 0.65fr 0.9fr 1.45fr;
+
+    gap: 3rem;
+
+    padding: 3.5rem 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        padding 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .row:hover {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    background: rgba(255, 255, 255, 0.015);
+    }
+
+    .period span {
+    color: var(--text-secondary);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    }
+
+    .identity h3 {
+    font-size: 1.15rem;
+    font-weight: 500;
+
+    letter-spacing: -0.02em;
+    }
+
+    .identity span {
+    display: block;
+
+    margin-top: 0.6rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.72rem;
+    }
+
+    .role {
+    display: block;
+
+    color: var(--text-primary);
+
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    }
+
+    .content p {
+    max-width: 620px;
+
+    margin-top: 1.2rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.95rem;
+    line-height: 1.75;
+    }
+
+    /* TAGS */
+
+    .tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+    margin-top: 1.8rem;
+    }
+
+    .tags span {
+    padding: 0.45rem 0.7rem;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    }
+
+    /* CURRENTLY EXPLORING */
+
+    .current {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5rem;
+
+    margin-top: 8rem;
+    padding-top: 4rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .currentLabel {
+    color: var(--text-secondary);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    }
+
+    .current h3 {
+    margin-top: 1rem;
+
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.05em;
+    }
+
+    .currentList {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .currentList span {
+    padding: 1.3rem 0;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 1rem;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+    }
+
+    .currentList span:first-child {
+    border-top: 1px solid var(--border);
+    }
+
+    .currentList span:hover {
+    padding-left: 0.8rem;
+
+    color: var(--text-primary);
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+    .experience {
+        padding: 8rem 0;
+    }
+
+    .heading {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+    .row {
+        grid-template-columns: 0.7fr 1.3fr;
+
+        gap: 2rem;
+    }
+
+    .content {
+        grid-column: 2;
+    }
+
+    .current {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+    .experience {
+        padding: 6rem 0;
+    }
+
+    .topRow {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+
+    .heading h2 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+    .timeline {
+        margin-top: 5rem;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+        padding: 2.5rem 0;
+    }
+
+    .row:hover {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content {
+        grid-column: auto;
+    }
+
+    .current {
+        margin-top: 6rem;
+    }
+    }

@@ -1,0 +1,612 @@
+    .caseStudy {
+    background: var(--background);
+    color: var(--text-primary);
+    overflow: hidden;
+    }
+
+    /* =========================
+    NAVIGATION
+    ========================= */
+
+    .nav {
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    }
+
+    .nav a {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .nav a:hover {
+    color: var(--text-primary);
+    transform: translateX(-4px);
+    }
+
+    /* =========================
+    CASE STUDY HERO
+    ========================= */
+
+    .hero {
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    }
+
+    .label {
+    display: block;
+
+    color: var(--text-secondary);
+
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    }
+
+    .hero h1 {
+    margin-top: 2rem;
+
+    font-size: clamp(5rem, 13vw, 12rem);
+    font-weight: 500;
+
+    line-height: 0.82;
+    letter-spacing: -0.075em;
+    }
+
+    .intro {
+    max-width: 760px;
+
+    margin-top: 3rem;
+
+    color: var(--text-secondary);
+
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    }
+
+    /* =========================
+    PROJECT INFORMATION
+    ========================= */
+
+    .projectInfo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 5rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .projectInfo span {
+    color: var(--text-secondary);
+
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    }
+
+    .projectInfo p {
+    margin-top: 0.7rem;
+
+    font-size: 0.9rem;
+    }
+
+    /* =========================
+    MAIN PROJECT VISUAL
+    ========================= */
+
+    .projectVisual {
+    padding-bottom: 10rem;
+    }
+
+    .imagePlaceholder {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    background:
+        radial-gradient(
+        circle at 65% 40%,
+        rgba(87, 59, 166, 0.25),
+        transparent 45%
+        ),
+        var(--surface);
+
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    }
+
+    /* =========================
+    STORY SECTIONS
+    ========================= */
+
+    .storySection {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+
+    gap: 4rem;
+
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .sectionNumber {
+    color: var(--text-secondary);
+
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    }
+
+    .storySection > div {
+    max-width: 850px;
+    }
+
+    .storySection h2 {
+    margin-top: 1.5rem;
+
+    max-width: 800px;
+
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.05em;
+    }
+
+    .storySection p {
+    max-width: 650px;
+
+    margin-top: 2.5rem;
+
+    color: var(--text-secondary);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+    }
+
+    /* =========================
+    SHARED SECTION HEADING
+    ========================= */
+
+    .sectionHeading {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+
+    gap: 4rem;
+    }
+
+    .sectionHeading h2 {
+    max-width: 800px;
+
+    margin-top: 1.5rem;
+
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.05em;
+    }
+
+    /* =========================
+    FEATURES
+    ========================= */
+
+    .features {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .featureGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 5rem;
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    }
+
+    .featureGrid article {
+    min-height: 270px;
+
+    padding: 2rem;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .featureGrid article:hover {
+    background: var(--surface);
+    }
+
+    .featureGrid article > span {
+    color: var(--text-secondary);
+
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    }
+
+    .featureGrid h3 {
+    margin-top: 4rem;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    }
+
+    .featureGrid p {
+    margin-top: 1rem;
+
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+    }
+
+    /* =========================
+    CHALLENGES
+    ========================= */
+
+    .challenges {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .challengeList {
+    margin-top: 5rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .challengeList article {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+
+    gap: 4rem;
+
+    padding: 3rem 0;
+
+    border-bottom: 1px solid var(--border);
+    }
+
+    .challengeList article > span {
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+    }
+
+    .challengeList article > div {
+    max-width: 700px;
+    }
+
+    .challengeList h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    }
+
+    .challengeList p {
+    margin-top: 1rem;
+
+    color: var(--text-secondary);
+
+    line-height: 1.8;
+    }
+
+    /* =========================
+    WHAT I LEARNED
+    ========================= */
+
+    .lesson {
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .lesson blockquote {
+    max-width: 1050px;
+
+    margin-top: 3rem;
+
+    font-size: clamp(2.8rem, 6vw, 6rem);
+    font-weight: 400;
+
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    }
+
+    /* =========================
+    FINAL RESULT
+    ========================= */
+
+    .finalSection {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .finalSection h2 {
+    max-width: 900px;
+
+    margin-top: 1.5rem;
+
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 400;
+
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    }
+
+    .links {
+    display: flex;
+    gap: 2rem;
+
+    margin-top: 3rem;
+    }
+
+    .links a {
+    padding-bottom: 0.4rem;
+
+    border-bottom: 1px solid var(--text-secondary);
+
+    color: var(--text-secondary);
+
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .links a:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+    }
+
+    /* =========================
+    NEXT PROJECT
+    ========================= */
+
+    .nextProject {
+    padding: 5rem 0;
+
+    background: var(--text-primary);
+    color: var(--background);
+    }
+
+    .nextProject > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .nextProject span {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+
+    opacity: 0.6;
+    }
+
+    .nextProject a {
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 500;
+
+    letter-spacing: -0.05em;
+
+    transition: transform 0.3s ease;
+    }
+
+    .nextProject a:hover {
+    transform: translateX(10px);
+    }
+
+    /* =========================
+    TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+
+        padding-top: 7rem;
+        padding-bottom: 5rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(4rem, 18vw, 8rem);
+    }
+
+    .projectInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imagePlaceholder {
+        min-height: 450px;
+    }
+
+    .storySection,
+    .sectionHeading,
+    .challengeList article {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+    .featureGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+
+    /* =========================
+    MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+    .nav {
+        height: 85px;
+    }
+
+    .hero {
+        padding-top: 5rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 19vw, 6rem);
+    }
+
+    .projectInfo {
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+    }
+
+    .projectVisual {
+        padding-bottom: 6rem;
+    }
+
+    .imagePlaceholder {
+        min-height: 300px;
+
+        border-radius: 14px;
+    }
+
+    .storySection,
+    .features,
+    .challenges {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .featureGrid {
+        grid-template-columns: 1fr;
+
+        margin-top: 3rem;
+    }
+
+    .featureGrid article {
+        min-height: 230px;
+    }
+
+    .lesson {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .lesson blockquote {
+        font-size: clamp(2.3rem, 11vw, 4rem);
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nextProject > div {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 2rem;
+    }
+    }
+
+
+        .projectVisual {
+    padding-bottom: 10rem;
+    }
+
+    .browserFrame {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    background: var(--surface);
+    }
+
+    .browserBar {
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0 1.2rem;
+
+    border-bottom: 1px solid var(--border);
+
+    background: #0f1115;
+    }
+
+    .browserDots {
+    display: flex;
+    gap: 0.4rem;
+    }
+
+    .browserDots span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #343840;
+    }
+
+    .browserUrl {
+    color: var(--text-secondary);
+
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    }
+
+    .imageWrapper {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    }
+
+    .projectImage {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+    }

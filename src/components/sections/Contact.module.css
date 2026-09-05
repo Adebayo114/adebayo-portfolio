@@ -1,0 +1,196 @@
+    .contact {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: stretch;
+
+    padding: 3rem 3rem 2rem;
+
+    background: #0a0b0d;
+    color: var(--text-primary);
+    }
+
+    .inner {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    }
+
+    /* TOP */
+
+    .topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    }
+
+    /* MAIN */
+
+    .main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 7rem 0;
+    }
+
+    .eyebrow {
+    color: var(--text-secondary);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    }
+
+    .main h2 {
+    margin-top: 2rem;
+
+    font-size: clamp(4rem, 9vw, 9.5rem);
+    font-weight: 400;
+
+    line-height: 0.84;
+    letter-spacing: -0.075em;
+    }
+
+    .main h2 span {
+    color: var(--text-secondary);
+    }
+
+    /* CTA */
+
+    .email {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 4rem;
+    padding-bottom: 0.6rem;
+
+    border-bottom: 1px solid var(--text-secondary);
+
+    color: var(--text-primary);
+
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+
+    transition:
+        gap 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .email span {
+    transition: transform 0.3s ease;
+    }
+
+    .email:hover {
+    gap: 1.5rem;
+    border-color: var(--text-primary);
+    }
+
+    .email:hover span {
+    transform: translate(3px, -3px);
+    }
+
+    /* FOOTER */
+
+    .footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 3rem;
+
+    padding-top: 2rem;
+
+    border-top: 1px solid var(--border);
+    }
+
+    .socials {
+    display: flex;
+    gap: 2rem;
+    }
+
+    .socials a {
+    color: var(--text-secondary);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+
+    transition: color 0.25s ease;
+    }
+
+    .socials a:hover {
+    color: var(--text-primary);
+    }
+
+    .meta {
+    display: flex;
+    gap: 2rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+    .contact {
+        min-height: 90vh;
+
+        padding-top: 2rem;
+    }
+
+    .topRow {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+
+    .main {
+        padding: 6rem 0;
+    }
+
+    .main h2 {
+        font-size: clamp(3.5rem, 17vw, 6rem);
+
+        line-height: 0.88;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+
+        gap: 1.2rem 2rem;
+    }
+
+    .meta {
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 1rem;
+    }
+    }
