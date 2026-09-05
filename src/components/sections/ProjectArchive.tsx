@@ -55,10 +55,10 @@
 
             <div className={styles.table}>
             <div className={styles.tableHead}>
-                <span>YEAR</span>
-                <span>PROJECT</span>
-                <span>TYPE</span>
-                <span>BUILT WITH</span>
+                <span>YEAR </span>
+                <span>PROJECT </span>
+                <span>TYPE </span>
+                <span>BUILT WITH </span>
                 <span />
             </div>
 

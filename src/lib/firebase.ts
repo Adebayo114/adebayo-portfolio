@@ -11,14 +11,6 @@
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
     };
 
-    console.log("Firebase config check:", {
-    hasApiKey: !!firebaseConfig.apiKey,
-    authDomain: firebaseConfig.authDomain,
-    projectId: firebaseConfig.projectId,
-    hasStorageBucket: !!firebaseConfig.storageBucket,
-    hasSenderId: !!firebaseConfig.messagingSenderId,
-    hasAppId: !!firebaseConfig.appId,
-    });
 
     const app =
     getApps().length > 0
